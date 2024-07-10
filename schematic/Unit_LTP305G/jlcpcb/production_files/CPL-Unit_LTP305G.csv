@@ -1,0 +1,11 @@
+Designator,Val,Package,Mid X,Mid Y,Rotation,Layer
+H1,M5Unit Screw Hole,unit_mounting_hole,156.21,-67.9,0.0,top
+J1,Conn_01x04,HY2.0-4P,160.655,-67.897,90.0,top
+R1,120,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,140.954,-74.5,0.0,top
+R2,120,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,134.858,-74.676,0.0,top
+R3,120,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,147.2,-61.2,0.0,top
+R4,120,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,134.858,-61.214,180.0,top
+R5,120,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,140.986,-61.214,180.0,top
+R6,120,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,147.304,-74.5,0.0,top
+U1,M5StampS3,M5StampS3,119.2022,-67.9196,-90.0,top
+U2,LTP305G,LTP305G,140.462,-68.072,90.0,top
