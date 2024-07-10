@@ -17,12 +17,13 @@
 #define I2C_DEV_ADDR 0x58
 
 //HPDL1414
-#define PIN_CA1   43
+#define PIN_CA1   39
 #define PIN_CA2    3
 #define PIN_CA3   42
 #define PIN_CA4   44
 #define PIN_CA5    4
 #define PIN_CA6    5
+#define PIN_CA7    6
 #define PIN_ANDE  40
 #define PIN_AN1   41
 #define PIN_AN2   46
@@ -101,6 +102,68 @@ void setup() {
   }
 
   setupI2CSlaveDevice();
+
+
+  // 各ピンを出力モードに設定
+  pinMode(PIN_CA1, OUTPUT);
+  pinMode(PIN_CA2, OUTPUT);
+  pinMode(PIN_CA3, OUTPUT);
+  pinMode(PIN_CA4, OUTPUT);
+  pinMode(PIN_CA5, OUTPUT);
+  pinMode(PIN_CA6, OUTPUT);
+  pinMode(PIN_CA7, OUTPUT);
+  pinMode(PIN_ANDE, OUTPUT);
+  pinMode(PIN_AN1, OUTPUT);
+  pinMode(PIN_AN2, OUTPUT);
+  pinMode(PIN_AN3, OUTPUT);
+  pinMode(PIN_AN4, OUTPUT);
+  pinMode(PIN_AN5, OUTPUT);
+
+    // 各ピンにデジタルで1を出力
+  digitalWrite(PIN_CA1,   1);
+  digitalWrite(PIN_CA2,   1);
+  digitalWrite(PIN_CA3,   1);
+  digitalWrite(PIN_CA4,   1);
+  digitalWrite(PIN_CA5,   1);
+  digitalWrite(PIN_CA6,   1);
+  digitalWrite(PIN_CA7,   1);
+  digitalWrite(PIN_ANDE,  1);
+  digitalWrite(PIN_AN1,   1);
+  digitalWrite(PIN_AN2,   1);
+  digitalWrite(PIN_AN3,   1);
+  digitalWrite(PIN_AN4,   1);
+  digitalWrite(PIN_AN5,   1);
+
+  for (i =0; i< 1000; i++)
+  {
+    digitalWrite(PIN_CA7,   1);
+    digitalWrite(PIN_CA1,   0);
+    delay(1);
+    digitalWrite(PIN_CA1,   1);
+    digitalWrite(PIN_CA2,   0);
+    delay(1);
+    digitalWrite(PIN_CA2,   1);
+    digitalWrite(PIN_CA3,   0);
+    delay(1);
+    digitalWrite(PIN_CA3,   1);
+    digitalWrite(PIN_CA4,   0);
+    delay(1);
+    digitalWrite(PIN_CA4,   1);
+    digitalWrite(PIN_CA5,   0);
+    delay(1);
+    digitalWrite(PIN_CA5,   1);
+    digitalWrite(PIN_CA6,   0);
+    delay(1);
+    digitalWrite(PIN_CA6,   1);
+    digitalWrite(PIN_CA7,   0);
+    delay(1);
+    //digitalWrite(PIN_CA7,   1);
+    //digitalWrite(PIN_CA1,   0);
+    //delay(10);
+  }  
+
+
+
 }
 
 void loop() {
