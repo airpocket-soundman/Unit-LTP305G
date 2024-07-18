@@ -20,7 +20,7 @@
 #define PIN_CA1   39
 #define PIN_CA2    3
 #define PIN_CA3   42
-#define PIN_CA4   44
+#define PIN_CA4    0   //44  
 #define PIN_CA5    4
 #define PIN_CA6    5
 #define PIN_CA7    6
@@ -138,25 +138,25 @@ void setup() {
   {
     digitalWrite(PIN_CA7,   1);
     digitalWrite(PIN_CA1,   0);
-    delay(1);
+    delay(1000);
     digitalWrite(PIN_CA1,   1);
     digitalWrite(PIN_CA2,   0);
-    delay(1);
+    delay(1000);
     digitalWrite(PIN_CA2,   1);
     digitalWrite(PIN_CA3,   0);
-    delay(1);
+    delay(1000);
     digitalWrite(PIN_CA3,   1);
     digitalWrite(PIN_CA4,   0);
-    delay(1);
+    delay(1000);
     digitalWrite(PIN_CA4,   1);
     digitalWrite(PIN_CA5,   0);
-    delay(1);
+    delay(1000);
     digitalWrite(PIN_CA5,   1);
     digitalWrite(PIN_CA6,   0);
-    delay(1);
+    delay(1000);
     digitalWrite(PIN_CA6,   1);
     digitalWrite(PIN_CA7,   0);
-    delay(1);
+    delay(1000);
     //digitalWrite(PIN_CA7,   1);
     //digitalWrite(PIN_CA1,   0);
     //delay(10);
