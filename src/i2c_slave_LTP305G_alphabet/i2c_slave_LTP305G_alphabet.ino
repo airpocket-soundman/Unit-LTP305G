@@ -403,6 +403,8 @@ void setup() {
 
     slideAlphabet(alphabet['A']);
 
+    slideText("test strings");
+
     // アルファベットの表示
     displayAlphabet(alphabet['A']);
 
@@ -630,7 +632,7 @@ void displayAlphabet(const Matrix& matrix) {
 void slideAlphabet(const Matrix& matrix) {
     // アニメーションが右から左にスライドするように設定
     for (int offset = -NUM_COLS; offset < NUM_TOTAL_COLS; offset++) {
-        for (int frame = 0; frame < 10; frame++) { // スライドを滑らかにするためのフレーム
+        for (int frame = 0; frame < 20; frame++) { // スライドを滑らかにするためのフレーム
             for (int col = 0; col < NUM_TOTAL_COLS; col++) {
                 if (col - offset >= 0 && col - offset < NUM_COLS) {
                     digitalWrite(totalColPins[col], LOW); // 現在の列をLowに設定
@@ -643,10 +645,9 @@ void slideAlphabet(const Matrix& matrix) {
                         digitalWrite(rowPins[row], LOW);
                     }
                 }
-                delay(1); // 少し待つ
+                delay(1); // スライド速度の調整
                 digitalWrite(totalColPins[col], HIGH); // 列をHighに戻す
             }
-            delay(50); // スライド速度の調整
         }
     }
 }
